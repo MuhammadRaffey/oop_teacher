@@ -1,0 +1,18 @@
+explain_oop_concept:
+  description: >
+    Explain the specified C++ OOP topic: {topic}
+    The explanation should be clear, engaging, and suitable for students learning C++.
+    Ensure the explanation is engaging.
+    DO NOT include any code in the explanation.
+  expected_output: >
+    A clear and engaging explanation of the specified C++ OOP concept ({topic}), with practical examples and use cases.
+  agent: oop_concept_explainer
+
+code_oop_concept:
+  description: >
+    Implement and demonstrate the specified C++ OOP topic: {topic}
+    The code should be well-documented with comments explaining key concepts.
+    Ensure the code is clear.
+  expected_output: >
+    A well-structured, documented C++ code example demonstrating the specified OOP concept ({topic}).
+  agent: oop_concept_coder
