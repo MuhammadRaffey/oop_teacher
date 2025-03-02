@@ -24,12 +24,14 @@ class OopCrew:
     def explain_oop_concept(self) -> Task:
         return Task(
             config=self.tasks_config["explain_oop_concept"],
+            output_file="oop_explanation.md",
         )
     
     @task
     def code_oop_concept(self) -> Task:
         return Task(
             config=self.tasks_config["code_oop_concept"],
+            output_file="oop_code.md",
         )
 
     @crew

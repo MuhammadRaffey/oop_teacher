@@ -1,56 +1,90 @@
-# {{crew_name}} Crew
+# OOP Teacher
 
-Welcome to the {{crew_name}} Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+A CrewAI-powered educational tool designed to teach Object-Oriented Programming concepts in C++. This project uses AI agents to provide both theoretical explanations and practical code examples for various OOP concepts.
+
+## Features
+
+- Interactive learning experience with AI-powered explanations
+- Detailed C++ code examples for each OOP concept
+- Automatic generation of combined markdown files with explanations and code
+- Training mode with result tracking
+- Clean and well-structured output format
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
-
-First, if you haven't already, install uv:
+1. Clone the repository:
 
 ```bash
-pip install uv
+git clone https://github.com/yourusername/oop_teacher.git
+cd oop_teacher
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/oop_teacher/config/agents.yaml` to define your agents
-- Modify `src/oop_teacher/config/tasks.yaml` to define your tasks
-- Modify `src/oop_teacher/crew.py` to add your own logic, tools and specific args
-- Modify `src/oop_teacher/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+2. Set up a virtual environment (recommended):
 
 ```bash
-crewai run
+uv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-This command initializes the oop-teacher Crew, assembling the agents and assigning them tasks as defined in your configuration.
+3. Install dependencies:
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+```bash
+uv sync
+```
 
-## Understanding Your Crew
+4. Set up environment variables:
+   Create a `.env` file in the root directory and add:
 
-The oop-teacher Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
-## Support
+## Usage
 
-For support, questions, or feedback regarding the {{crew_name}} Crew or crewAI.
+1. Run the OOP Teacher:
 
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+```bash
+uv run kickoff
+```
 
-Let's create wonders together with the power and simplicity of crewAI.
+2. Enter an OOP topic when prompted (e.g., "inheritance", "polymorphism", "encapsulation")
+
+3. The program will generate:
+   - A theoretical explanation of the concept
+   - Practical C++ code examples
+   - A combined markdown file with both explanation and implementation
+
+## Output Files
+
+- `oop_combined_output.md`: Contains both the concept explanation and code implementation
+
+## Project Structure
+
+```
+oop_teacher/
+├── src/
+│   └── oop_teacher/
+│       ├── crews/
+│       │   └── oop_crew/
+│       │       ├── config/
+│       │       │   ├── agents.yaml
+│       │       │   └── tasks.yaml
+│       │       └── oop_crew.py
+│       └── main.py
+├── .env
+├── README.md
+└── LICENSE
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [CrewAI](https://docs.crewai.com/)
+- Powered by OpenAI's API
