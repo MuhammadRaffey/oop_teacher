@@ -15,7 +15,7 @@ A CrewAI-powered educational tool designed to teach Object-Oriented Programming 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/oop_teacher.git
+git clone https://github.com/MuhammadRaffey/oop_teacher.git
 cd oop_teacher
 ```
 
