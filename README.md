@@ -36,7 +36,7 @@ uv sync
    Create a `.env` file in the root directory and add:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here #or any other provider you want to use
 ```
 
 ## Usage
